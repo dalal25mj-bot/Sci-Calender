@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0ea5e9">
+<title>Science Through the Year | Scientists &amp; UN Observances</title>
+<style>
+:root{--ink:#10243a;--mu:#5c6f82;--bg:#f4f7fb;--card:#fff;--ln:#dce5ef;--c1:#087eaa;--c2:#4657a8;--c3:#c04b79;--c4:#e6aa28;--sh:0 2px 4px rgba(16,42,67,.06),0 12px 30px rgba(14,165,233,.14);--P:#2563eb;--A:#7c3aed;--C:#f97316;--B:#16a34a;--M:#e11d48;--G:#d97706;--E:#0891b2}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:linear-gradient(180deg,#edf4fa 0,#f7f9fc 440px,var(--bg) 100%);padding-bottom:env(safe-area-inset-bottom)}
+h1,h2,h3{line-height:1.15;letter-spacing:-.02em;margin:0}
+.hero{position:relative;overflow:hidden;color:#fff;padding:calc(48px + env(safe-area-inset-top)) max(20px,calc((100vw - 1000px)/2)) 42px;background:radial-gradient(ellipse at 85% 5%,rgba(255,255,255,.18),transparent 34%),linear-gradient(125deg,#102e4b 0%,#155d7c 55%,#4657a8 100%)}
+.hero h1{font-size:clamp(2.25rem,8vw,4.25rem);font-weight:900;max-width:760px;letter-spacing:-.055em}.hero h1 em{font-style:normal;color:#fde047}
+.hero p{max-width:650px;margin:14px 0 0;opacity:.92;font-size:1.04rem}.kick{font:700 .78rem ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase;opacity:.9;margin-bottom:8px}
+.atom{position:absolute;right:-70px;top:-30px;width:330px;opacity:.35;pointer-events:none}
+.atom ellipse{fill:none;stroke:#fff;stroke-width:3}.atom g{transform-origin:150px 150px;animation:sp 14s linear infinite}.atom g:nth-child(2){animation-duration:20s;animation-direction:reverse}.atom g:nth-child(3){animation-duration:26s}
+@keyframes sp{to{transform:rotate(360deg)}}
+.stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.stat{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);border-radius:14px;padding:8px 14px;backdrop-filter:blur(6px)}.stat b{display:block;font-size:1.5rem}.stat span{font-size:.75rem}
+.today{margin-top:18px;background:#fff;color:var(--ink);border-radius:16px;padding:13px 17px;max-width:680px;box-shadow:0 10px 28px rgba(0,0,0,.13);border:1px solid rgba(255,255,255,.5)}
+nav{position:sticky;top:0;z-index:20;display:flex;gap:6px;overflow-x:auto;padding:8px 10px calc(8px);padding-top:calc(8px + env(safe-area-inset-top));background:rgba(250,252,255,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--ln);scrollbar-width:none}nav::-webkit-scrollbar{display:none}
+nav a{flex:none;text-decoration:none;color:var(--ink);font-weight:750;font-size:.85rem;padding:8px 15px;border-radius:999px;background:#e9f0f7}nav a:hover{background:var(--c1);color:#fff}
+main{max-width:1100px;margin:auto;padding:12px 18px 52px}section{padding-top:28px}
+h2{font-size:1.7rem;font-weight:900}h2 small{display:block;font:700 .75rem ui-monospace,monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--c2);margin-bottom:4px}
+.mu{color:var(--mu)}.panel{background:rgba(255,255,255,.94);border:1px solid var(--ln);border-radius:22px;padding:18px;box-shadow:0 12px 34px rgba(25,52,78,.07);margin-top:14px}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+input,select{width:100%;padding:11px 12px;border-radius:12px;border:2px solid var(--ln);background:#fff;color:var(--ink);font:inherit}input:focus,select:focus{outline:0;border-color:var(--c1)}
+label{display:block;font-weight:700;font-size:.8rem;margin:0 0 4px}
+.btn{border:0;cursor:pointer;font:800 .85rem system-ui;color:#fff;padding:10px 16px;border-radius:999px;background:linear-gradient(135deg,var(--c1),var(--c2));box-shadow:0 6px 16px rgba(99,102,241,.3);transition:transform .15s}.btn:hover{transform:translateY(-2px)}.btn:active{transform:scale(.96)}
+.btn.pk{background:linear-gradient(135deg,var(--c3),#fb7185)}.btn.sm{padding:7px 12px;font-size:.78rem;box-shadow:none}.btn.gh{background:#eaf6fd;color:var(--ink);box-shadow:none}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}.chip{border:2px solid var(--ln);background:#fff;border-radius:999px;padding:5px 12px;font:700 .8rem system-ui;cursor:pointer;color:var(--ink)}.chip.on{color:#fff;border-color:transparent;background:var(--fc,var(--c1))}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(225px,1fr));gap:18px;margin-top:14px}
+.sc{background:#fff;border-radius:19px;overflow:hidden;border:1px solid var(--ln);box-shadow:0 7px 24px rgba(25,52,78,.08);cursor:pointer;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s;border-top:4px solid var(--fc)}.sc:hover{transform:translateY(-5px);box-shadow:0 16px 34px rgba(25,52,78,.15)}
+.ph{position:relative;aspect-ratio:4/3;background:linear-gradient(135deg,color-mix(in srgb,var(--fc) 24%,#fff),#eaf0f6);overflow:hidden}
+.ph .av{position:absolute;inset:0;display:grid;place-items:center;font:900 3.4rem system-ui;color:var(--fc);opacity:.72;background:radial-gradient(circle at 50% 35%,#fff,transparent 68%)}.ph.no-photo:after{content:'Portrait not available';position:absolute;left:0;right:0;bottom:0;text-align:center;padding:7px;font-size:.68rem;font-weight:700;letter-spacing:.04em;color:var(--mu);background:rgba(255,255,255,.78)}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 22%;opacity:0;transition:opacity .5s;filter:saturate(.9)}.ph img.ok{opacity:1}
+.bd{padding:14px 15px 15px;display:flex;flex-direction:column;gap:5px;flex:1}.bd b{font-size:1.04rem;line-height:1.3}.bd .d{font:700 .78rem ui-monospace,monospace;color:var(--fc)}
+.tag{display:inline-block;background:color-mix(in srgb,var(--fc) 14%,#fff);color:var(--fc);border-radius:999px;padding:1px 10px;font-size:.74rem;font-weight:800;width:max-content}
+.acts{display:flex;gap:6px;margin-top:auto;padding-top:8px;align-items:center}.star{margin-left:auto;font-size:1.3rem;background:none;border:0;cursor:pointer;color:#cbd5e1;padding:0}.star.on{color:var(--c4)}
+.out{margin-top:10px;padding:10px 12px;border-radius:12px;background:#fff7d6;border-left:5px solid var(--c4);font-weight:600;font-size:.9rem}
+.cele{background:linear-gradient(135deg,#fff1f8,#eef7ff 55%,#fff9db);border:2px dashed var(--c3)}
+.up{display:flex;gap:10px;align-items:center;padding:8px 0;border-bottom:1px dashed var(--ln)}.up:last-child{border:0}.up .dt{flex:none;width:52px;text-align:center;border-radius:12px;background:var(--fc);color:#fff;font-weight:900;line-height:1.1;padding:6px 0}.up .dt small{display:block;font-size:.65rem;text-transform:uppercase}.up div.nm{flex:1}
+#mo{position:fixed;inset:0;z-index:50;background:rgba(16,42,67,.55);display:none;align-items:center;justify-content:center;padding:14px}#mo.on{display:flex}
+.md{background:#fff;border-radius:24px;max-width:520px;width:100%;max-height:90vh;overflow:auto;position:relative;border-top:8px solid var(--fc)}.md .ph{aspect-ratio:16/10}.md .in{padding:16px}.x{position:absolute;right:10px;top:10px;z-index:3;width:36px;height:36px;border-radius:50%;border:0;background:#fff;font-size:1.3rem;cursor:pointer;box-shadow:var(--sh)}
+.ph{aspect-ratio:3/4}.ph .nm{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:30px 10px 8px;color:#fff;font-weight:800;font-size:.95rem;line-height:1.2;background:linear-gradient(transparent,rgba(16,42,67,.88))}
+.rowwrap{margin-top:18px}.rh{display:flex;align-items:baseline;justify-content:space-between;border-left:6px solid var(--fc);padding-left:10px}.rh b{font-size:1.15rem}
+.rail{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px 2px 14px;margin-top:4px;scrollbar-width:thin;-webkit-overflow-scrolling:touch}.rail .sc{flex:none;width:205px;scroll-snap-align:start}
+#pager{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:18px}#pager span{font-weight:800}.btn[disabled]{opacity:.4;pointer-events:none}
+.gal{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:16px}.hav{width:64px;height:64px;border-radius:50%;object-fit:cover;border:3px solid #fde047;box-shadow:0 4px 12px rgba(0,0,0,.3);background:#ffffff55;opacity:0;transition:opacity .5s,transform .3s}.hav.ok{opacity:1}.hav:hover{transform:scale(1.12)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.tb{border:2px solid rgba(255,255,255,.6);background:rgba(255,255,255,.18);color:#fff;font:800 .9rem system-ui;padding:9px 18px;border-radius:999px;cursor:pointer}.tb.on,.tb:hover{background:#fff;color:#4f46e5}
+.row2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}textarea{width:100%;min-height:96px;padding:11px 12px;border-radius:12px;border:2px solid var(--ln);font:inherit;resize:vertical}
+.idea{border-left:5px solid var(--c4);background:#fffbea;border-radius:12px;padding:10px 12px;margin-top:10px}.idea h4{margin:0 0 4px}.idea p{margin:0 0 6px;color:var(--mu);font-size:.9rem}
+.info{background:#f1f9ff;border-left:5px solid var(--fc);border-radius:12px;padding:10px 12px;margin:8px 0}.info h4{margin:0 0 3px;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--fc)}.info p{margin:0}
+footer{text-align:center;padding:26px 16px;color:var(--mu);font-size:.8rem}
+@media(max-width:560px){.hero{padding-left:18px;padding-right:18px}.stats{gap:7px}.stat{padding:7px 10px}.stat b{font-size:1.25rem}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.bd{padding:10px}.bd b{font-size:.92rem}.bd .mu{font-size:.74rem!important}.rail .sc{width:178px}.panel{padding:14px}}@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* Gratitude letter and UN observance calendar */
+.thanks{background:linear-gradient(135deg,#102e4b,#155d7c 58%,#4657a8);color:#fff;border:0}
+.thanks p{max-width:850px}
+.thanks .sign{color:#fde047;font-weight:800;margin-top:16px}
+.obs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:12px;margin-top:14px}
+.obs-card{background:#fff;border:1px solid var(--ln);border-radius:16px;padding:14px 15px;box-shadow:0 7px 20px rgba(25,52,78,.06);display:flex;flex-direction:column;gap:5px}
+.obs-card .date{font:800 .75rem ui-monospace,monospace;color:var(--c1);letter-spacing:.04em}
+.obs-card b{line-height:1.3}
+.obs-card p{margin:0;color:var(--mu);font-size:.88rem}
+.obs-card a{font-size:.8rem;font-weight:800;color:var(--c2);text-decoration:none;margin-top:auto;padding-top:6px}
+.obs-card a:hover{text-decoration:underline}
+.obs-note{font-size:.85rem;color:var(--mu);margin-top:12px}
+
+
+/* App-like page navigation: each category opens as its own view */
+.page-view{display:none;min-height:60vh;padding-top:24px}
+.page-view.active{display:block}
+nav button{flex:none;border:0;cursor:pointer;color:var(--ink);font:750 .85rem system-ui;padding:9px 14px;border-radius:999px;background:#e9f0f7}
+nav button.active,nav button:hover{background:linear-gradient(135deg,#087eaa,#4657a8);color:white}
+.page-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px}
+.page-home{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--ln);border-radius:999px;padding:7px 12px;background:#fff;color:var(--c1);font-weight:800;cursor:pointer}
+.sc .brief{font-size:.78rem;line-height:1.4;color:#415a72;margin:3px 0 5px;min-height:2.2em}
+.sc .quote-mini{font-size:.73rem;color:#775b20;font-style:italic;line-height:1.35;border-left:3px solid #e6aa28;padding-left:7px;margin-top:2px}
+.md .info.quote{background:#fff9e8;border-color:#d7a536}
+.obs-controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:12px;padding:10px 12px;background:#eff7ff;border-radius:12px}
+.obs-controls label{display:flex;align-items:center;gap:8px;margin:0;font-size:.9rem}
+.obs-controls input{width:18px;height:18px}
+.profile-photo{display:block;object-position:50% 24%;background:#eaf2f9}
+@media(max-width:560px){nav{padding-left:9px}nav button{font-size:.78rem;padding:8px 11px}.page-view{padding-top:18px}}
+
+</style></head><body>
+<header class="hero">
+<svg class="atom" viewBox="0 0 300 300" aria-hidden="true"><g><ellipse cx="150" cy="150" rx="130" ry="48"/></g><g><ellipse cx="150" cy="150" rx="130" ry="48" transform="rotate(60 150 150)"/></g><g><ellipse cx="150" cy="150" rx="130" ry="48" transform="rotate(120 150 150)"/></g><circle cx="150" cy="150" r="14" fill="#fde047"/></svg>
+<div class="kick">A year of curiosity · 365 days</div>
+<h1>Science <em>Through</em> the Year</h1>
+<p>Celebrate the birthdays and big ideas of great scientists. Explore each category on its own page, discover scientists and their contributions, and add birthdays and global science observances to your phone calendar.</p>
+<div class="gal" id="gal"><img class="hav" alt="Marie Curie" data-w="Marie_Curie" data-u="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Marie_Curie_c._1920s.jpg/400px-Marie_Curie_c._1920s.jpg" referrerpolicy="no-referrer"><img class="hav" alt="Albert Einstein" data-w="Albert_Einstein" data-u="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Albert_Einstein_Head.jpg/400px-Albert_Einstein_Head.jpg" referrerpolicy="no-referrer"><img class="hav" alt="Isaac Newton" data-w="Isaac_Newton" data-u="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Portrait_of_Sir_Isaac_Newton%2C_1689.jpg/400px-Portrait_of_Sir_Isaac_Newton%2C_1689.jpg" referrerpolicy="no-referrer"><img class="hav" alt="Hypatia" data-w="Hypatia" data-u="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Hypatia_portrait.jpg/400px-Hypatia_portrait.jpg" referrerpolicy="no-referrer"><img class="hav" alt="Ada Lovelace" data-w="Ada_Lovelace" data-u="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Ada_Lovelace_portrait.jpg/400px-Ada_Lovelace_portrait.jpg" referrerpolicy="no-referrer"></div>
+<div class="stats"><div class="stat"><b id="n1">0</b><span>scientists</span></div><div class="stat"><b>12</b><span>months</span></div><div class="stat"><b>7</b><span>science fields</span></div><div class="stat"><b>🎂</b><span>calendar reminders</span></div></div>
+<div class="today" id="today"></div>
+<div class="tabs"><button class="tb on" data-t="sci">🔬 Scientists</button></div>
+</header>
+<nav aria-label="Website sections">
+<button class="active" data-page="directory">🔬 Scientists</button>
+<button data-page="finder">🔎 Birthday finder</button>
+<button data-page="celebrate">🎂 Calendar</button>
+<button data-page="observances">🌍 UN observances</button>
+<button data-page="gratitude">💌 Thank-you letter</button>
+<button data-page="about-me">👩‍🔬 About Me</button>
+<button data-page="about">ℹ️ About</button>
+<button data-page="gift">🎁 Gift</button>
+</nav>
+<main>
+<div id="sciView">
+<section id="directory" class="page-view active"><h2><small>Explore the collection</small>Scientist directory</h2>
+<div class="panel"><div class="row"><div><label for="q">Search name or country</label><input id="q" type="search" placeholder="e.g. Curie, India…"></div><div><label for="mo-sel">Month</label><select id="mo-sel"></select></div><div><label for="so">Sort</label><select id="so"><option value="b">Birthday order</option><option value="n">Name A–Z</option><option value="y">Birth year</option></select></div></div>
+<div class="chips" id="fchips"></div><div class="chips" id="vchips"><button class="chip on" data-v="rows">▤ Swipe rows by field</button><button class="chip" data-v="pages">▦ Pages</button></div><div class="mu" id="cnt"></div></div>
+<div id="grid"></div><div id="pager"></div></section>
+
+<section id="finder" class="page-view"><div class="page-heading"><span></span><button class="page-home" data-home>← Back to scientists</button></div><h2><small>365-day calendar explorer</small>Find a birthday</h2>
+<div class="panel"><label for="fd">Choose any date (the year is ignored)</label><input type="date" id="fd"><div id="fres" class="mu" style="margin-top:10px">Pick a date to see matching scientists.</div></div></section>
+
+<section id="celebrate" class="page-view"><div class="page-heading"><span></span><button class="page-home" data-home>← Back to scientists</button></div><h2><small>Phone calendar</small>🎉 Celebration reminders</h2>
+<div class="panel cele"><p class="mu" style="margin-top:0">Birthdays and selected UN/science observances can be exported as all-day calendar events with yearly reminders. Open the downloaded file and your calendar adds it.</p>
+<div class="row"><div><label for="am">Month</label><select id="am"></select></div><div><label for="al">Alert</label><select id="al"><option value="PT9H">9:00 on the day</option><option value="-PT15H">9:00 the day before</option><option value="-P6DT15H">9:00 one week before</option><option value="PT0S">Midnight at the start</option></select></div></div>
+<div class="obs-controls"><label><input type="checkbox" id="includeObs" checked> Include UN and science observances in downloaded calendar reminders</label></div><div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:8px"><button class="btn pk" id="bm">🎂 Add this month</button><button class="btn" id="bs">⭐ Add my starred</button><button class="btn gh" id="ba">Add all</button><button class="btn" id="bsci">🔬 All scientists in one file</button></div>
+<div class="out" id="cout">Star ⭐ scientists in the directory, or add a whole month at once.</div></div>
+<div class="panel"><b>Coming up next</b><div id="up"></div></div></section>
+
+
+<section id="observances" class="page-view"><div class="page-heading"><span></span><button class="page-home" data-home>← Back to scientists</button></div>
+<h2><small>Science, sustainability & global awareness</small>🌍 UN-related observances</h2>
+<p class="mu">A year-round calendar connecting scientific discovery with the global challenges we share: health, water, biodiversity, climate, oceans, space, disaster risk and peace.</p>
+<div class="obs-grid">
+<article class="obs-card"><span class="date">11 FEB</span><b>International Day of Women and Girls in Science</b><p>Celebrates the vital role of women and girls in science and the importance of equal access and participation.</p><a href="https://www.un.org/en/observances/women-and-girls-in-science-day" target="_blank" rel="noopener">Official information ↗</a><button class="btn sm gh obs-remind" data-obs-name="International Day of Women and Girls in Science">＋ Add reminder</button></article>
+<article class="obs-card"><span class="date">03 MAR</span><b>World Wildlife Day</b><p>Highlights wild animals and plants, biodiversity and the need to protect ecosystems.</p><a href="https://www.un.org/en/observances/world-wildlife-day" target="_blank" rel="noopener">Official information ↗</a><button class="btn sm gh obs-remind" data-obs-name="World Wildlife Day">＋ Add reminder</button></article>
+<article class="obs-card"><span class="date">21 MAR</span><b>International Day of Forests</b><p>Recognizes forests and trees and their contribution to people and the planet.</p><a href="https://www.un.org/en/observances/forests-and-trees-day" target="_blank" rel="noopener">Official information ↗</a><button class="btn sm gh obs-remind" data-obs-name="International Day of Forests">＋ Add reminder</button></article>
+<article class="obs-card"><span class="date">22 MAR</span><b>World Water Day</b><p>Focuses attention on freshwater, water access and sustainable water management.</p><a href="https://www.un.org/en/observances/water-day" target="_blank" rel="noopener">Official information ↗</a><button class="btn sm gh obs-remind" data-obs-name="World Water Day">＋ Add reminder</button></article>
+<article class="obs-card"><span class="date">23 MAR</span><b>World Meteorological Day</b><p>Highlights the work of meteorological services and the importance of weather and climate science.</p><a href="https://wmo.int/" target="_blank" rel="noopener">Official information ↗</a><button class="btn sm gh obs-remind" data-obs-name="World Meteorological Day">＋ Add reminder</button></article>
+<article class="obs-card"><span class="date">22 APR</span><b>International Mother Earth Day</b><p>Encourages harmony with nature and care for the ecosystems that sustain life.</p><a href="https://www.un.org/en/observances/earth-day" target="_blank" rel="noopener">Official information ↗</a><button class="btn sm gh obs-remind" data-obs-name="International Mother Earth Day">＋ Add reminder</button></article>
+<article class="obs-card"><span class="date">22 MAY</span><b>International Day for Biological Diversity</b><p>Raises awareness of biodiversity and the importance of protecting the variety of life on Earth.</p><a href="https://www.un.org/en/observances/biologic-diversity-day" target="_blank" rel="noopener">Official information ↗</a><button class="btn sm gh obs-remind" data-obs-name="International Day for Biological Diversity">＋ Add reminder</button></article>
+<article class="obs-card"><span class="date">05 JUN</span><b>World Environment Day</b><p>Encourages global action to protect the environment.</p><a href="https://www.un.org/en/observances/environment-day" target="_blank" rel="noopener">Official information ↗</a><button class="btn sm gh obs-remind" data-obs-name="World Environment Day">＋ Add reminder</button></article>
+<article class="obs-card"><span class="date">08 JUN</span><b>World Oceans Day</b><p>Celebrates the ocean and encourages action to conserve marine environments.</p><a href="https://www.un.org/en/observances/oceans-day" target="_blank" rel="noopener">Official information ↗</a><button class="btn sm gh obs-remind" data-obs-name="World Oceans Day">＋ Add reminder</button></article>
+<article class="obs-card"><span class="date">17 JUN</span><b>World Day to Combat Desertification and Drought</b><p>Draws attention to land degradation, drought resilience and sustainable land management.</p><a href="https://www.un.org/en/observances/desertification-day" target="_blank" rel="noopener">Official information ↗</a><button class="btn sm gh obs-remind" data-obs-name="World Day to Combat Desertification and Drought">＋ Add reminder</button></article>
+<article class="obs-card"><span class="date">07 SEP</span><b>International Day of Clean Air for Blue Skies</b><p>Promotes action for cleaner air and healthier communities.</p><a href="https://www.un.org/en/observances/clean-air-day" target="_blank" rel="noopener">Official information ↗</a><button class="btn sm gh obs-remind" data-obs-name="International Day of Clean Air for Blue Skies">＋ Add reminder</button></article>
+<article class="obs-card"><span class="date">16 SEP</span><b>International Day for the Preservation of the Ozone Layer</b><p>Marks international cooperation to protect the ozone layer.</p><a href="https://www.un.org/en/observances/ozone-day" target="_blank" rel="noopener">Official information ↗</a><button class="btn sm gh obs-remind" data-obs-name="International Day for the Preservation of the Ozone Layer">＋ Add reminder</button></article>
+<article class="obs-card"><span class="date">16 SEP</span><b>International Day of Science, Technology and Innovation for the South</b><p>Highlights the role of science, technology and innovation in sustainable development in the Global South.</p><a href="https://www.un.org/en/observances" target="_blank" rel="noopener">Official information ↗</a><button class="btn sm gh obs-remind" data-obs-name="International Day of Science, Technology and Innovation for the South">＋ Add reminder</button></article>
+<article class="obs-card"><span class="date">21 SEP</span><b>International Day of Peace</b><p>Connects peace, cooperation and shared action to address global challenges, including through science.</p><a href="https://www.un.org/en/observances/international-day-peace" target="_blank" rel="noopener">Official information ↗</a><button class="btn sm gh obs-remind" data-obs-name="International Day of Peace">＋ Add reminder</button></article>
+<article class="obs-card"><span class="date">04–10 OCT</span><b>World Space Week</b><p>An annual international celebration of space science and technology and their contributions to humanity.</p><a href="https://www.un.org/en/observances/world-space-week" target="_blank" rel="noopener">Official information ↗</a><button class="btn sm gh obs-remind" data-obs-name="World Space Week">＋ Add reminder</button></article>
+<article class="obs-card"><span class="date">05 NOV</span><b>World Tsunami Awareness Day</b><p>Promotes tsunami awareness, preparedness and the use of science to reduce disaster risk.</p><a href="https://www.un.org/en/observances/tsunami-awareness-day" target="_blank" rel="noopener">Official information ↗</a><button class="btn sm gh obs-remind" data-obs-name="World Tsunami Awareness Day">＋ Add reminder</button></article>
+<article class="obs-card"><span class="date">09–15 NOV*</span><b>International Week of Science and Peace</b><p>Encourages the use of scientific knowledge and international cooperation in support of peace.</p><a href="https://www.un.org/en/observances/world-science-day/week" target="_blank" rel="noopener">Official information ↗</a><button class="btn sm gh obs-remind" data-obs-name="International Week of Science and Peace">＋ Add reminder</button></article>
+<article class="obs-card"><span class="date">10 NOV</span><b>World Science Day for Peace and Development</b><p>Highlights science’s role in society and the need to engage the public in discussion of emerging scientific issues.</p><a href="https://www.un.org/en/observances/world-science-day" target="_blank" rel="noopener">Official information ↗</a><button class="btn sm gh obs-remind" data-obs-name="World Science Day for Peace and Development">＋ Add reminder</button></article>
+<article class="obs-card"><span class="date">05 DEC</span><b>World Soil Day</b><p>Raises awareness of the importance of healthy soil for food systems, ecosystems and sustainable development.</p><a href="https://www.un.org/en/observances/world-soil-day" target="_blank" rel="noopener">Official information ↗</a><button class="btn sm gh obs-remind" data-obs-name="World Soil Day">＋ Add reminder</button></article>
+</div>
+<p class="obs-note">*The International Week of Science and Peace takes place each year during the week in which 11 November falls; the reminder is set to 9 November as a convenient annual calendar marker. Dates and official titles are based on United Nations and UN-system observance pages. Some observances are designated by specialized UN agencies.</p>
+</section>
+
+
+<section id="gratitude" class="page-view"><div class="page-heading"><span></span><button class="page-home" data-home>← Back to scientists</button></div>
+<h2><small>A message of appreciation</small>💌 A thank-you letter to the scientists</h2>
+<div class="panel thanks">
+<p><strong>Dear Scientists, Pioneers, Researchers and Curious Minds,</strong></p>
+<p>Thank you for looking beyond what was already known. Thank you for asking difficult questions, testing ideas, learning from failure and having the courage to explore the unknown.</p>
+<p>Your discoveries have changed how we understand the universe, care for our health, communicate, travel, grow food and protect our planet. Some of you worked in laboratories; others observed the skies, studied living things, developed mathematical ideas, designed instruments or challenged accepted explanations. Every careful measurement, thoughtful question and shared insight has helped move human knowledge forward.</p>
+<p>We also remember the teachers, assistants, technicians, collaborators and students whose contributions make scientific progress possible. Knowledge grows when it is shared, questioned and made accessible to everyone.</p>
+<p>May science continue to build bridges across cultures, inspire the next generation, support peace and help create a fairer and more sustainable world. Your curiosity has become part of humanity’s shared inheritance.</p>
+<p><strong>With gratitude and admiration,</strong><br>The Science Through the Year community</p>
+<p class="sign">Keep questioning. Keep discovering. Keep making a difference. ✦</p>
+</div>
+</section>
+
+
+<section id="about-me" class="page-view"><div class="page-heading"><span></span><button class="page-home" data-home>← Back to scientists</button></div>
+<h2><small>Educator profile</small>👩‍🔬 About Me</h2>
+<div class="profile-panel">
+<img class="profile-photo" src="assets/dalal-profile.jpg" alt="Dalal Alotaibi, science and physics educator" loading="eager">
+<div>
+<h3>Dalal Alotaibi</h3><p class="mu" style="font-size:.8rem">Science educator · Physics specialist · Curriculum and educational leadership</p>
+<div class="profile-role">Science &amp; Physics Educator | Curriculum Alignment | Educational Leadership</div>
+<p>I am a physics-qualified educator and curriculum leader with 14 years of experience, including 12 years teaching science and physics. My work is grounded in inquiry, hands-on learning and helping students connect scientific ideas with the world around them.</p>
+<p>I have taught the Saudi MOE McGraw-Hill science and physics curriculum and developed working knowledge of the England National Curriculum, NGSS and the IB PYP, MYP and DP. I use approaches such as the 5E instructional model, STEM/STEAM, project-based learning, PhET simulations and augmented reality to make learning active and meaningful.</p>
+<p>Alongside classroom teaching, I have coordinated and supported teams of educators, mentored teachers and contributed to quality assurance through KPI and Monitoring, Evaluation and Learning (MEL) practices.</p>
+<div class="profile-facts"><span>14 years of experience</span><span>Physics Education</span><span>NGSS · UK · IB</span><span>STEM / STEAM</span><span>Teacher mentoring</span></div>
+<p><strong>My belief:</strong> Science education should nurture curiosity, critical thinking, collaboration and a sense of responsibility for our shared world.</p>
+</div>
+</div>
+</section>
+
+<section id="about" class="page-view"><div class="page-heading"><span></span><button class="page-home" data-home>← Back to scientists</button></div><h2><small>Accuracy &amp; sources</small>About this collection</h2>
+<div class="panel"><p style="margin-top:0">Portraits and summaries load from Wikipedia when you are online, and each profile links back to its biography. If a photo cannot load, a coloured monogram appears. Some historical birth dates are disputed or recorded under older calendars, so check the biography before publishing or teaching. Starred scientists are saved on this device only.</p><p class="mu" style="margin-bottom:0">Portraits are retrieved from the scientists’ Wikipedia biography pages when available. For people who lived before photography, the image may be a later artistic depiction rather than a photograph. If no verified portrait is available, the card keeps a name monogram instead of showing an unrelated face.</p><p class="mu" style="margin-bottom:0;margin-top:12px">With gratitude to every scientist, teacher, student and technician who dared to ask “why?” ✦<br><span class="mu">Educator profile text is adapted from the supplied CV. Profile portrait is cropped from the image supplied for this project.</span></p></div></section>
+</div>
+<section id="gift" class="page-view"><div class="page-heading"><span></span><button class="page-home" data-home>← Back to scientists</button></div>
+<div class="gift-panel">
+<div class="gift-heart">✦</div>
+<h2>🎁 A Gift for You</h2>
+<p><strong>A little gift for every curious mind:</strong></p>
+<p>May you always have the courage to ask questions, the patience to explore, and the imagination to turn ideas into possibilities. May knowledge open doors, kindness guide discovery, and science bring people together.</p>
+<p><em>Keep wondering. Keep learning. Keep creating a better tomorrow.</em></p>
+<div class="gift-heart">♡</div>
+</div>
+</section>
+</main>
+
+
+
+<footer>SCIENCE THROUGH THE YEAR · Celebrating discovery, gratitude and science for a sustainable future<br><span class="mu">UN observance links are provided for learning and awareness; this is an independent educational project and is not an official UN website.</span></footer>
+<div id="mo"><div class="md" id="md"></div></div>
+<script>
+const $=i=>document.getElementById(i),P2=n=>String(n).padStart(2,"0");
+const F={P:["Physics","#2563eb"],A:["Astronomy","#7c3aed"],C:["Chemistry","#f97316"],B:["Life & Medicine","#16a34a"],M:["Maths & Computing","#e11d48"],G:["Engineering","#d97706"],E:["Earth","#0891b2"]};
+const MN=["January","February","March","April","May","June","July","August","September","October","November","December"];
+const RAW=`Isaac Newton|0104|1643|P|UK
+Galileo Galilei|0215|1564|P|Italy
+Albert Einstein|0314|1879|P|Germany
+Marie Curie|1107|1867|P|Poland
+Niels Bohr|1007|1885|P|Denmark
+Max Planck|0423|1858|P|Germany
+Michael Faraday|0922|1791|P|UK
+James Clerk Maxwell|0613|1831|P|UK
+Ernest Rutherford|0830|1871|P|New Zealand
+Richard Feynman|0511|1918|P|USA
+Stephen Hawking|0108|1942|P|UK
+Erwin Schrödinger|0812|1887|P|Austria
+Werner Heisenberg|1205|1901|P|Germany
+Enrico Fermi|0929|1901|P|Italy
+Chien-Shiung Wu|0531|1912|P|China
+Lise Meitner|1107|1878|P|Austria
+Paul Dirac|0808|1902|P|UK
+Nikola Tesla|0710|1856|P|Croatia
+Heinrich Hertz|0222|1857|P|Germany
+James Prescott Joule|1224|1818|P|UK
+Georg Ohm|0316|1789|P|Germany
+Alessandro Volta|0218|1745|P|Italy
+André-Marie Ampère|0120|1775|P|France
+C. V. Raman|1107|1888|P|India
+Satyendra Nath Bose|0101|1894|P|India
+Abdus Salam|0129|1926|P|Pakistan
+Subrahmanyan Chandrasekhar|1019|1910|A|India
+Wilhelm Röntgen|0327|1845|P|Germany
+J. J. Thomson|1218|1856|P|UK
+Lord Kelvin|0626|1824|P|UK
+Hendrik Lorentz|0718|1853|P|Netherlands
+Christiaan Huygens|0414|1629|P|Netherlands
+Hans Christian Ørsted|0814|1777|P|Denmark
+Pierre Curie|0515|1859|P|France
+Henri Becquerel|1215|1852|P|France
+Max Born|1211|1882|P|Germany
+Wolfgang Pauli|0425|1900|P|Austria
+Peter Higgs|0529|1929|P|UK
+Jocelyn Bell Burnell|0715|1943|A|UK
+Emmy Noether|0323|1882|M|Germany
+Nicolaus Copernicus|0219|1473|A|Poland
+Johannes Kepler|1227|1571|A|Germany
+Edwin Hubble|1120|1889|A|USA
+Carl Sagan|1109|1934|A|USA
+Cecilia Payne-Gaposchkin|0510|1900|A|UK
+Vera Rubin|0723|1928|A|USA
+Annie Jump Cannon|1211|1863|A|USA
+Henrietta Swan Leavitt|0704|1868|A|USA
+Tycho Brahe|1214|1546|A|Denmark
+William Herschel|1115|1738|A|Germany
+Caroline Herschel|0316|1750|A|Germany
+Katherine Johnson|0826|1918|M|USA
+Neil deGrasse Tyson|1005|1958|A|USA
+Dmitri Mendeleev|0208|1834|C|Russia
+Antoine Lavoisier|0826|1743|C|France
+John Dalton|0906|1766|C|UK
+Rosalind Franklin|0725|1920|C|UK
+Dorothy Hodgkin|0512|1910|C|UK
+Linus Pauling|0228|1901|C|USA
+Robert Boyle|0125|1627|C|Ireland
+Humphry Davy|1217|1778|C|UK
+Ahmed Zewail|0226|1946|C|Egypt
+Alfred Nobel|1021|1833|C|Sweden
+Joseph Priestley|0313|1733|C|UK
+Svante Arrhenius|0219|1859|C|Sweden
+Fritz Haber|1209|1868|C|Germany
+Stephanie Kwolek|0731|1923|C|USA
+Tu Youyou|1230|1930|B|China
+Mario Molina|0319|1943|C|Mexico
+Ada Yonath|0622|1939|C|Israel
+Jennifer Doudna|0219|1964|B|USA
+Emmanuelle Charpentier|1211|1968|B|France
+Kary Mullis|1228|1944|C|USA
+Charles Darwin|0212|1809|B|UK
+Gregor Mendel|0720|1822|B|Czechia
+Louis Pasteur|1227|1822|B|France
+Alexander Fleming|0806|1881|B|UK
+Barbara McClintock|0616|1902|B|USA
+Jane Goodall|0403|1934|B|UK
+Rachel Carson|0527|1907|B|USA
+Florence Nightingale|0512|1820|B|UK
+Edward Jenner|0517|1749|B|UK
+Robert Koch|1211|1843|B|Germany
+Santiago Ramón y Cajal|0501|1852|B|Spain
+Wangari Maathai|0401|1940|B|Kenya
+Ivan Pavlov|0926|1849|B|Russia
+Francis Crick|0608|1916|B|UK
+Rita Levi-Montalcini|0422|1909|B|Italy
+Alfred Russel Wallace|0108|1823|B|UK
+Carl Linnaeus|0523|1707|B|Sweden
+Katalin Karikó|0117|1955|B|Hungary
+Elizabeth Blackwell|0203|1821|B|UK
+Lynn Margulis|0305|1938|B|USA
+E. O. Wilson|0610|1929|B|USA
+Flossie Wong-Staal|0827|1946|B|China
+Gertrude Elion|0123|1918|B|USA
+Patricia Bath|1104|1942|B|USA
+Ernest Everett Just|0814|1883|B|USA
+Ada Lovelace|1210|1815|M|UK
+Alan Turing|0623|1912|M|UK
+Grace Hopper|1209|1906|M|USA
+Carl Friedrich Gauss|0430|1777|M|Germany
+Leonhard Euler|0415|1707|M|Switzerland
+Srinivasa Ramanujan|1222|1887|M|India
+Maryam Mirzakhani|0512|1977|M|Iran
+Sophie Germain|0401|1776|M|France
+Blaise Pascal|0619|1623|M|France
+Charles Babbage|1226|1791|M|UK
+Tim Berners-Lee|0608|1955|M|UK
+Hedy Lamarr|1109|1914|G|Austria
+Mae Jemison|1017|1956|G|USA
+Thomas Edison|0211|1847|G|USA
+Mary Anning|0521|1799|E|UK
+Alfred Wegener|1101|1880|E|Germany
+Inge Lehmann|0513|1888|E|Denmark
+Charles Richter|0426|1900|E|USA
+Alexander von Humboldt|0914|1769|E|Germany
+Kalpana Chawla|0317|1962|G|India
+Mary Somerville|1226|1780|E|UK
+Hertha Ayrton|0428|1854|G|UK
+Hypatia|0331|350|A|Egypt
+Al-Khwarizmi|0901|780|M|Persia
+Ibn al-Haytham|0701|965|P|Iraq`;
+const RICH={"Hypatia": {"d": "c. 415", "p": "Alexandria, Egypt", "c": "Preserved ancient geometry and astronomical work in Alexandria.", "k": "Led a renowned school of philosophy and mathematics.", "w": "Hypatia", "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Hypatia_portrait.jpg/400px-Hypatia_portrait.jpg", "f": "Mathematics & Astronomy"}, "Al-Khwarizmi": {"d": "c. 850", "p": "Abbasid Caliphate", "c": "Systematized algebra and the use of Hindu-Arabic numerals.", "k": "The term 'algorithm' originates from the Latinization of his name.", "w": "Muhammad_ibn_Musa_al-Khwarizmi", "img": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Al-Khwarizmi_stamp.jpg", "f": "Mathematics"}, "Ibn al-Haytham": {"d": "1040", "p": "Basra, Iraq", "c": "Formulated early principles of light reflection and experimental optics.", "k": "Demonstrated that vision occurs from rays entering the eye.", "w": "Ibn_al-Haytham", "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Ibn_al-Haytham_portrait.jpg/400px-Ibn_al-Haytham_portrait.jpg", "f": "Physics & Optics"}, "Marie Curie": {"d": "1934", "p": "Warsaw, Poland", "c": "Discovered Polonium and Radium; pioneered radioactivity research.", "k": "First woman to win a Nobel Prize and only person with Nobels in two scientific fields.", "w": "Marie_Curie", "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Marie_Curie_c._1920s.jpg/400px-Marie_Curie_c._1920s.jpg", "f": "Physics & Chemistry"}, "Albert Einstein": {"d": "1955", "p": "Ulm, Germany", "c": "Developed the general theory of relativity and E=mc².", "k": "Won the 1921 Nobel Prize in Physics for explaining the photoelectric effect.", "w": "Albert_Einstein", "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Albert_Einstein_Head.jpg/400px-Albert_Einstein_Head.jpg", "f": "Physics"}, "Isaac Newton": {"d": "1727", "p": "Woolsthorpe, England", "c": "Formulated the fundamental laws of motion and universal gravitation.", "k": "Wrote the foundational text Philosophiæ Naturalis Principia Mathematica.", "w": "Isaac_Newton", "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Portrait_of_Sir_Isaac_Newton%2C_1689.jpg/400px-Portrait_of_Sir_Isaac_Newton%2C_1689.jpg", "f": "Physics & Mathematics"}, "Galileo Galilei": {"d": "1642", "p": "Pisa, Italy", "c": "Discovered Jupiter's moons and phases of Venus with an improved telescope.", "k": "Pioneered systematic observational astronomy and experimental mechanics.", "w": "Galileo_Galilei", "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Justus_Sustermans_-_Galileo_Galilei%2C_1636.jpg/400px-Justus_Sustermans_-_Galileo_Galilei%2C_1636.jpg", "f": "Astronomy & Physics"}, "Ada Lovelace": {"d": "1852", "p": "London, UK", "c": "Wrote the first machine algorithm intended for Babbage's Analytical Engine.", "k": "Widely recognized as the first computer programmer.", "w": "Ada_Lovelace", "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Ada_Lovelace_portrait.jpg/400px-Ada_Lovelace_portrait.jpg", "f": "Computer Science"}, "Rosalind Franklin": {"d": "1958", "p": "London, UK", "c": "Captured Photo 51 showing the helical structure of DNA.", "k": "Her X-ray diffraction images provided crucial insights into double-helix geometry.", "w": "Rosalind_Franklin", "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Rosalind_Franklin_%281920-1958%29.jpg/400px-Rosalind_Franklin_%281920-1958%29.jpg", "f": "Biochemistry"}, "Katherine Johnson": {"d": "2020", "p": "Virginia, USA", "c": "Calculated trajectory equations for early NASA human spaceflights.", "k": "Her manual calculations verified early digital computer flight paths.", "w": "Katherine_Johnson", "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Katherine_Johnson_at_NASA_in_1966.jpg/400px-Katherine_Johnson_at_NASA_in_1966.jpg", "f": "Mathematics & Space Science"}};
+const APPROX=new Set(['Hypatia','Al-Khwarizmi','Ibn al-Haytham']);
+const WT={"Lord Kelvin":"William_Thomson,_1st_Baron_Kelvin"};
+const QUOTES={"Isaac Newton": {"q": "If I have seen further it is by standing on the shoulders of Giants.", "src": "Letter to Robert Hooke, 1675; Newton's correspondence."}, "Marie Curie": {"q": "Nothing in life is to be feared, it is only to be understood.", "src": "Widely attributed to Marie Curie; exact source wording should be verified before formal citation."}, "Richard Feynman": {"q": "I would rather have questions that can't be answered than answers that can't be questioned.", "src": "Attributed to Richard Feynman; wording varies across published sources."}, "Ada Lovelace": {"q": "The Analytical Engine has no pretensions whatever to originate anything.", "src": "Notes on the Analytical Engine, Note G (1843)."}, "Charles Darwin": {"q": "I am not apt to follow blindly the lead of other men.", "src": "The Autobiography of Charles Darwin."}, "Stephen Hawking": {"q": "Remember to look up at the stars and not down at your feet.", "src": "Widely circulated quotation attributed to Stephen Hawking; verify wording before formal citation."}, "Galileo Galilei": {"q": "You cannot teach a man anything; you can only help him find it within himself.", "src": "Commonly attributed to Galileo; attribution is disputed."}, "Albert Einstein": {"q": "The important thing is not to stop questioning.", "src": "Commonly attributed to Einstein; wording varies by source."}};
+const D=RAW.split("\n").map((l,i)=>{const[n,md,y,f,c]=l.split("|");return{id:i,n,m:+md.slice(0,2),d:+md.slice(2),y:+y,f,c,w:(RICH[n]&&RICH[n].w)||WT[n]||n.replace(/ /g,"_"),u:APPROX.has(n)}});
+$("n1").textContent=D.length;
+const fmtD=s=>`${s.u?"c. ":""}${s.d} ${MN[s.m-1].slice(0,3)} ${s.y}${s.u?" (date approx.)":""}`;
+let stars=[];try{stars=JSON.parse(localStorage.getItem("stars")||"[]")}catch(e){}
+let ff="all";
+// selects
+["mo-sel","am"].forEach((id,k)=>{$(id).innerHTML=(k?"":"<option value='0'>All months</option>")+MN.map((m,i)=>`<option value="${i+1}">${m}</option>`).join("")});
+$("am").value=new Date().getMonth()+1;
+$("fchips").innerHTML=`<button class="chip on" data-f="all">All fields</button>`+Object.entries(F).map(([k,v])=>`<button class="chip" data-f="${k}" style="--fc:${v[1]}">${v[0]}</button>`).join("");
+// photos
+let ph={};try{ph=JSON.parse(localStorage.getItem("ph2")||"{}")}catch(e){}
+const iob=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;iob.unobserve(e.target);loadImg(e.target)}),{rootMargin:"200px"});
+function sum(w){return fetch("https://en.wikipedia.org/api/rest_v1/page/summary/"+encodeURIComponent(w),{headers:{"Accept":"application/json"}}).then(r=>r.ok?r.json():Promise.reject())}
+let jc=0;
+function jsonp(t){return new Promise((ok,no)=>{const cb="wpcb"+(jc++),sc=document.createElement("script");const to=setTimeout(()=>{cleanup();no()},9000);function cleanup(){clearTimeout(to);delete window[cb];sc.remove()}
+ window[cb]=d=>{cleanup();try{const pg=Object.values(d.query.pages)[0];pg&&pg.thumbnail?ok(pg.thumbnail.source):no()}catch(e){no()}};
+ sc.onerror=()=>{cleanup();no()};sc.src="https://en.wikipedia.org/w/api.php?action=query&format=json&prop=pageimages&piprop=thumbnail&pithumbsize=600&redirects=1&titles="+encodeURIComponent(t.replace(/_/g," "))+"&callback="+cb;document.head.appendChild(sc)})}
+function loadImg(im){
+ const w=im.dataset.w,fb=im.dataset.u;
+ const set=u=>{im.onload=()=>{im.classList.add("ok");im.closest(".ph")?.classList.add("has-photo")};im.onerror=()=>{im.classList.remove("ok");im.removeAttribute("src");im.closest(".ph")?.classList.add("no-photo");if(fb&&im.dataset.triedFallback!=="1"){im.dataset.triedFallback="1";set(fb)}};im.src=u};
+ if(ph[w]){set(ph[w]);return}
+ const ok=u=>{ph[w]=u;try{localStorage.setItem("ph2",JSON.stringify(ph))}catch(e){}set(u)};
+ sum(w).then(j=>j.thumbnail&&j.thumbnail.source?ok(j.thumbnail.source):Promise.reject())
+ .catch(()=>jsonp(w).then(ok).catch(()=>{if(fb)set(fb);else im.closest(".ph")?.classList.add("no-photo")}))
+}
+const ini=n=>n.replace(/[^A-Za-zÀ-ž ]/g,"").split(" ").filter(Boolean).filter((w,k,a)=>k==0||k==a.length-1).map(w=>w[0]).join("");
+function card(s){return `<div class="sc" data-id="${s.id}" style="--fc:${F[s.f][1]}"><div class="ph"><span class="av">${ini(s.n)}</span><img alt="Portrait of ${s.n}" data-w="${s.w}" data-u="${(RICH[s.n]||{}).img||""}" referrerpolicy="no-referrer"><span class="nm">${s.n}</span></div><div class="bd"><span class="d">${fmtD(s)}</span><span class="tag">${F[s.f][0]}</span><span class="mu" style="font-size:.8rem">${s.c}</span><div class="brief" data-brief="${s.id}">${RICH[s.n]?.c||"Loading a short biography and scientific contribution…"}</div>${QUOTES[s.n]?`<div class="quote-mini">“${QUOTES[s.n].q}”</div>`:""}<div class="acts"><button class="btn sm pk" data-r="${s.id}">🎂 Remind</button><button class="star ${stars.includes(s.id)?"on":""}" data-s="${s.id}" aria-label="Star">★</button></div></div></div>`}
+const briefObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(!e.isIntersecting)return;const el=e.target;briefObserver.unobserve(el);const s=D[+el.dataset.brief];if(!s)return;el.dataset.loaded="1";if(RICH[s.n]?.c){el.textContent=RICH[s.n].c;return;}sum(s.w).then(j=>{if(el.isConnected){const t=(j.extract||"").replace(/\s+/g," ");el.textContent=t.length>145?t.slice(0,142)+"…":(t||"Open the scientist profile to explore their work.");}}).catch(()=>{if(el.isConnected)el.textContent="Open the profile to explore their scientific work.";});}),{rootMargin:"180px"});
+let view="rows",pg=1;const PS=12;
+function render(){
+ const q=$("q").value.toLowerCase(),m=+$("mo-sel").value,so=$("so").value;
+ let L=D.filter(s=>(ff=="all"||s.f==ff)&&(!m||s.m==m)&&(s.n.toLowerCase().includes(q)||s.c.toLowerCase().includes(q)));
+ L.sort((a,b)=>so=="n"?a.n.localeCompare(b.n):so=="y"?a.y-b.y:(a.m-b.m)||(a.d-b.d));
+ $("cnt").textContent=`${L.length} of ${D.length} scientists`;
+ const g=$("grid"),pgr=$("pager");
+ if(!L.length){g.className="";g.innerHTML="<p class='mu'>No matches. Try another search.</p>";pgr.innerHTML="";return}
+ if(view=="rows"){g.className="";pgr.innerHTML="";
+  g.innerHTML=Object.keys(F).filter(k=>L.some(s=>s.f==k)).map(k=>{const A=L.filter(s=>s.f==k);return `<div class="rowwrap" style="--fc:${F[k][1]}"><div class="rh"><b>${F[k][0]}</b><span class="mu" style="font-size:.8rem">${A.length} · swipe →</span></div><div class="rail">${A.map(card).join("")}</div></div>`}).join("")}
+ else{const N=Math.ceil(L.length/PS);pg=Math.max(1,Math.min(pg,N));g.className="grid";g.innerHTML=L.slice((pg-1)*PS,pg*PS).map(card).join("");
+  pgr.innerHTML=`<button class="btn sm" data-p="-1" ${pg<=1?"disabled":""}>← Prev</button><span>Page ${pg} of ${N}</span><button class="btn sm" data-p="1" ${pg>=N?"disabled":""}>Next →</button>`}
+ document.querySelectorAll("#grid img").forEach(i=>iob.observe(i));
+ document.querySelectorAll("#grid .brief[data-brief]").forEach(el=>{if(!briefObserver)briefObserver.observe(el);});
+}
+$("q").oninput=$("mo-sel").onchange=$("so").onchange=()=>{pg=1;render()};
+$("vchips").onclick=e=>{const b=e.target.closest(".chip");if(!b)return;view=b.dataset.v;pg=1;document.querySelectorAll("#vchips .chip").forEach(c=>c.classList.toggle("on",c===b));render()};
+$("fchips").onclick=e=>{const b=e.target.closest(".chip");if(!b)return;ff=b.dataset.f;pg=1;document.querySelectorAll("#fchips .chip").forEach(c=>{c.classList.toggle("on",c===b);if(c===b)c.style.setProperty("--fc",b.style.getPropertyValue("--fc")||"#0ea5e9")});render()};
+// calendar
+const ESC=t=>String(t).replace(/\\/g,"\\\\").replace(/;/g,"\\;").replace(/,/g,"\\,").replace(/\n/g,"\\n");
+const FOLD=l=>{let o="";while(l.length>70){o+=l.slice(0,70)+"\r\n ";l=l.slice(70)}return o+l};
+function nextYear(s){const t=new Date(),y=t.getFullYear();return new Date(y,s.m-1,s.d)<new Date(y,t.getMonth(),t.getDate())?y+1:y}
+const ymd=(y,m,d)=>`${y}${P2(m)}${P2(d)}`;
+function vev(s){const y=nextYear(s),n=new Date(y,s.m-1,s.d+1);
+ return ["BEGIN:VEVENT",`UID:sci-${s.id}-${s.w}@science-through-the-year`,"DTSTAMP:"+new Date().toISOString().replace(/[-:]/g,"").replace(/\.\d+/,""),
+ "DTSTART;VALUE=DATE:"+ymd(y,s.m,s.d),"DTEND;VALUE=DATE:"+ymd(n.getFullYear(),n.getMonth()+1,n.getDate()),"RRULE:FREQ=YEARLY",
+ "SUMMARY:"+ESC(`🎂 ${s.n}'s birthday · ${F[s.f][0]}`),"DESCRIPTION:"+ESC(`${s.n} was born on ${fmtD(s)} (${s.c}). Celebrate with a fact, a question or a mini experiment.\nhttps://en.wikipedia.org/wiki/${s.w}`),
+ "URL:https://en.wikipedia.org/wiki/"+s.w,"TRANSP:TRANSPARENT","BEGIN:VALARM","TRIGGER:"+$("al").value,"ACTION:DISPLAY","DESCRIPTION:"+ESC(s.n+"'s birthday"),"END:VALARM","END:VEVENT"]}
+
+const OBS=[
+{n:"International Day of Women and Girls in Science",m:2,d:11,desc:"Celebrate the contributions of women and girls in science and support equal participation.",url:"https://www.un.org/en/observances/women-and-girls-in-science-day"},
+{n:"World Wildlife Day",m:3,d:3,desc:"Biodiversity and the protection of wild animals and plants.",url:"https://www.un.org/en/observances/world-wildlife-day"},
+{n:"International Day of Forests",m:3,d:21,desc:"Forests, trees and sustainable development.",url:"https://www.un.org/en/observances/forests-and-trees-day"},
+{n:"World Water Day",m:3,d:22,desc:"Freshwater and sustainable water management.",url:"https://www.un.org/en/observances/water-day"},
+{n:"World Meteorological Day",m:3,d:23,desc:"Weather, climate and meteorological science.",url:"https://wmo.int/"},
+{n:"International Mother Earth Day",m:4,d:22,desc:"Harmony with nature and protection of ecosystems.",url:"https://www.un.org/en/observances/earth-day"},
+{n:"International Day for Biological Diversity",m:5,d:22,desc:"Biodiversity and the variety of life on Earth.",url:"https://www.un.org/en/observances/biologic-diversity-day"},
+{n:"World Environment Day",m:6,d:5,desc:"Global action to protect the environment.",url:"https://www.un.org/en/observances/environment-day"},
+{n:"World Oceans Day",m:6,d:8,desc:"Ocean conservation and marine environments.",url:"https://www.un.org/en/observances/oceans-day"},
+{n:"World Day to Combat Desertification and Drought",m:6,d:17,desc:"Land restoration, drought resilience and sustainable land management.",url:"https://www.un.org/en/observances/desertification-day"},
+{n:"International Day of Clean Air for Blue Skies",m:9,d:7,desc:"Clean air and healthier communities.",url:"https://www.un.org/en/observances/clean-air-day"},
+{n:"International Day for the Preservation of the Ozone Layer",m:9,d:16,desc:"International cooperation to protect the ozone layer.",url:"https://www.un.org/en/observances/ozone-day"},
+{n:"International Day of Science, Technology and Innovation for the South",m:9,d:16,desc:"Science, technology and innovation for sustainable development in the Global South.",url:"https://www.un.org/en/observances"},
+{n:"International Day of Peace",m:9,d:21,desc:"Peace, cooperation and shared global action.",url:"https://www.un.org/en/observances/international-day-peace"},
+{n:"World Space Week",m:10,d:4,desc:"Annual celebration of space science and technology (4–10 October).",url:"https://www.un.org/en/observances/world-space-week"},
+{n:"World Tsunami Awareness Day",m:11,d:5,desc:"Tsunami awareness, preparedness and disaster-risk science.",url:"https://www.un.org/en/observances/tsunami-awareness-day"},
+{n:"International Week of Science and Peace",m:11,d:9,desc:"Science and international cooperation for peace (week containing 11 November).",url:"https://www.un.org/en/observances/world-science-day/week"},
+{n:"World Science Day for Peace and Development",m:11,d:10,desc:"Science in society and public engagement with scientific issues.",url:"https://www.un.org/en/observances/world-science-day"},
+{n:"World Soil Day",m:12,d:5,desc:"Healthy soils for food systems, ecosystems and sustainable development.",url:"https://www.un.org/en/observances/world-soil-day"}
+];
+function nextObsYear(o){const t=new Date(),y=t.getFullYear();return new Date(y,o.m-1,o.d)<new Date(y,t.getMonth(),t.getDate())?y+1:y}
+function oev(o){const y=nextObsYear(o),n=new Date(y,o.m-1,o.d+1);return ["BEGIN:VEVENT",`UID:obs-${o.m}-${o.d}-${o.n.replace(/[^a-z0-9]/gi,"").slice(0,20)}@science-through-the-year`,"DTSTAMP:"+new Date().toISOString().replace(/[-:]/g,"").replace(/\.\d+/,""),"DTSTART;VALUE=DATE:"+ymd(y,o.m,o.d),"DTEND;VALUE=DATE:"+ymd(n.getFullYear(),n.getMonth()+1,n.getDate()),"RRULE:FREQ=YEARLY","SUMMARY:"+ESC("🌍 "+o.n),"DESCRIPTION:"+ESC(o.desc+"\nOfficial information: "+o.url),"URL:"+o.url,"TRANSP:TRANSPARENT","BEGIN:VALARM","TRIGGER:"+$("al").value,"ACTION:DISPLAY","DESCRIPTION:"+ESC(o.n),"END:VALARM","END:VEVENT"]}
+function selectedObs(month){return $("includeObs")?.checked?OBS.filter(o=>!month||o.m===month):[]}
+function dl(name,list){const t=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Science Through the Year//EN","CALSCALE:GREGORIAN"].concat(list.flatMap(x=>x.type==="obs"?oev(x):vev(x)),["END:VCALENDAR"]).map(FOLD).join("\r\n")+"\r\n";
+ const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([t],{type:"text/calendar;charset=utf-8"}));a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},1500)}
+function say(t){$("cout").textContent=t}
+$("bm").onclick=()=>{const m=+$("am").value,L=D.filter(s=>s.m==m),O=selectedObs(m).map(o=>({...o,type:"obs"}));dl(`science-calendar-${MN[m-1].toLowerCase()}.ics`,[...L,...O]);say(`${L.length} birthdays and ${O.length} observances for ${MN[m-1]} are ready. Open the downloaded file to add them to your calendar.`)};
+$("bs").onclick=()=>{const L=D.filter(s=>stars.includes(s.id));if(!L.length){say("Tap the ★ on a scientist first.");return}dl("my-science-birthdays.ics",L);say(`${L.length} starred birthdays are ready to add.`)};
+$("bsci").onclick=()=>{dl("all-scientists-birthdays.ics",D);say(`All ${D.length} scientists' yearly birthday reminders are ready in one file. Open the downloaded file to add them to your calendar.`)};
+$("ba").onclick=()=>{const O=selectedObs(0).map(o=>({...o,type:"obs"}));dl("science-through-the-year-calendar.ics",[...D,...O]);say(`All ${D.length} birthdays and ${O.length} observances are ready. Your calendar may take a moment to import them.`)};
+function gcal(s){const y=nextYear(s),n=new Date(y,s.m-1,s.d+1);return "https://calendar.google.com/calendar/render?action=TEMPLATE&text="+encodeURIComponent(`🎂 ${s.n}'s birthday`)+"&dates="+ymd(y,s.m,s.d)+"/"+ymd(n.getFullYear(),n.getMonth()+1,n.getDate())+"&recur="+encodeURIComponent("RRULE:FREQ=YEARLY")+"&details="+encodeURIComponent(`Born ${fmtD(s)}. https://en.wikipedia.org/wiki/${s.w}`)}
+// upcoming + today
+const now=new Date(),td=new Date(now.getFullYear(),now.getMonth(),now.getDate());
+const dd=s=>{let t=new Date(now.getFullYear(),s.m-1,s.d);if(t<td)t=new Date(now.getFullYear()+1,s.m-1,s.d);return Math.round((t-td)/864e5)};
+const sorted=[...D].sort((a,b)=>dd(a)-dd(b));
+$("up").innerHTML=sorted.slice(0,6).map(s=>`<div class="up" style="--fc:${F[s.f][1]}"><div class="dt"><small>${MN[s.m-1].slice(0,3)}</small>${s.d}</div><div class="nm"><b>${s.n}</b><br><span class="mu" style="font-size:.8rem">${dd(s)==0?"Today! 🎉":dd(s)+" days · "+F[s.f][0]}</span></div><button class="btn sm pk" data-r="${s.id}">🎂</button></div>`).join("");
+const tb=D.filter(s=>dd(s)==0);
+$("today").innerHTML=tb.length?`🎉 <b>Born today:</b> ${tb.map(s=>s.n).join(", ")}`:`📅 <b>Next birthday:</b> ${sorted[0].n} · ${fmtD(sorted[0]).slice(0,-5)} (in ${dd(sorted[0])} days)`;
+// finder
+$("fd").onchange=e=>{const v=e.target.value;if(!v)return;const[,m,d]=v.split("-").map(Number),L=D.filter(s=>s.m==m&&s.d==d);
+ $("fres").innerHTML=L.length?`<div class="grid">${L.map(card).join("")}</div>`:`No scientist in this collection was born on ${d} ${MN[m-1]}.`;document.querySelectorAll("#fres img").forEach(i=>iob.observe(i))};
+// events
+document.addEventListener("click",e=>{
+ const ob=e.target.closest("[data-obs-name]");if(ob){const o=OBS.find(x=>x.n===ob.dataset.obsName);if(o){dl("science-observance-reminder.ics",[{...o,type:"obs"}]);$("cout").textContent=`${o.n} reminder is ready. Open the downloaded calendar file to add it.`;}return}
+ const r=e.target.closest("[data-r]");if(r){e.stopPropagation();dl(`${D[+r.dataset.r].w}-birthday.ics`,[D[+r.dataset.r]]);say(`${D[+r.dataset.r].n}'s yearly birthday reminder is ready. Open the file to add it.`);return}
+ const st=e.target.closest("[data-s]");if(st){e.stopPropagation();const i=+st.dataset.s;stars=stars.includes(i)?stars.filter(x=>x!=i):[...stars,i];try{localStorage.setItem("stars",JSON.stringify(stars))}catch(_){}document.querySelectorAll(`[data-s="${i}"]`).forEach(b=>b.classList.toggle("on",stars.includes(i)));return}
+ const pp=e.target.closest("[data-p]");if(pp){pg+=+pp.dataset.p;render();$("directory").scrollIntoView();return}
+ const c=e.target.closest(".sc");if(c){open(D[+c.dataset.id]);return}
+ if(e.target.id=="mo"||e.target.closest(".x"))$("mo").classList.remove("on")});
+function open(s){const c=F[s.f][1];$("md").style.setProperty("--fc",c);
+ $("md").innerHTML=`<button class="x" aria-label="Close">×</button><div class="ph"><span class="av">${ini(s.n)}</span><img alt="Portrait of ${s.n}" data-w="${s.w}" data-u="${(RICH[s.n]||{}).img||""}" referrerpolicy="no-referrer"></div><div class="in"><h3>${s.n}</h3><div class="d" style="color:${c};font:700 .85rem ui-monospace,monospace;margin:4px 0 8px">${fmtD(s)} · ${s.c} · ${F[s.f][0]}</div><div class="info"><h4>Scientific contribution &amp; achievement</h4><p>${RICH[s.n]?.c||"A brief biography and scientific contribution will load from the linked profile when available."}</p></div>${RICH[s.n]?`<div class="info"><h4>Achievement / legacy</h4><p>${RICH[s.n].k}</p></div><div class="mu" style="font-size:.85rem;margin:6px 0">${RICH[s.n].p} · ${RICH[s.n].f}</div>`:""}${QUOTES[s.n]?`<div class="info quote"><h4>Words attributed to ${s.n}</h4><p>“${QUOTES[s.n].q}”</p><small>${QUOTES[s.n].src}</small></div>`:`<div class="info quote"><h4>Quotation</h4><p>No quotation with a sufficiently clear source is included here yet. The site avoids inventing words or assigning unverified quotations to scientists.</p></div>`}<p id="ex" class="mu">Loading biography…</p><div style="display:flex;flex-wrap:wrap;gap:8px"><button class="btn pk" data-r="${s.id}">🎂 Add yearly reminder</button><a class="btn gh" style="text-decoration:none" target="_blank" rel="noopener" href="${gcal(s)}">Google Calendar</a><a class="btn" style="text-decoration:none" target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/${s.w}">Read more</a><a class="btn gh" style="text-decoration:none" target="_blank" rel="noopener" href="https://www.google.com/search?q=${encodeURIComponent('site:nationalgeographic.com '+s.n)}">National Geographic</a></div></div>`;
+ $("mo").classList.add("on");loadImg($("md").querySelector("img"));
+ sum(s.w).then(j=>{$("ex").textContent=j.extract||"No summary available.";const contribution=$("md").querySelector(".info p");if(contribution&&!RICH[s.n]?.c&&j.extract)contribution.textContent=j.extract}).catch(()=>{$("ex").textContent="Biography unavailable offline. Use “Read more” when you are connected."})}
+document.addEventListener("keydown",e=>{if(e.key=="Escape")$("mo").classList.remove("on")});
+
+document.querySelectorAll(".hav").forEach(loadImg);
+function showPage(id){document.querySelectorAll(".page-view").forEach(p=>{p.classList.toggle("active",p.id===id);p.style.display=p.id===id?"block":"none"});document.querySelectorAll("nav [data-page]").forEach(b=>b.classList.toggle("active",b.dataset.page===id));document.querySelector("nav").style.display="";window.scrollTo({top:0,behavior:"smooth"});}
+document.querySelectorAll("nav [data-page]").forEach(b=>b.onclick=()=>showPage(b.dataset.page));
+document.querySelectorAll("[data-home]").forEach(b=>b.onclick=()=>showPage("directory"));
+document.querySelectorAll(".tb").forEach(b=>b.onclick=()=>showPage("directory"));
+const esc=t=>String(t).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+render();
+setTimeout(()=>{if(!document.querySelector("img.ok")){const n=document.createElement("div");n.className="out";n.style.cssText="margin:10px 14px;background:#ffe4e6;border-color:#f43f5e";n.innerHTML="📷 Photos could not load here. They come from Wikipedia, so they need an internet connection and a normal browser (Chrome, Safari, Edge). Open this file directly in your browser, or publish it, instead of using an in-app preview.";document.querySelector("main").prepend(n)}},9000);
+</script></body></html>
